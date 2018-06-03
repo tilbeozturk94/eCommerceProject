@@ -1,0 +1,61 @@
+.mainHeader{
+    color:white;
+    text-align: center;
+    background-image: url("https://image.freepik.com/free-photo/cute-flowers-on-pink-background-with-space-on-right_23-2147691006.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 40%;
+    -webkit-box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 5px 6px 0px rgba(0,0,0,0.75);
+    font-family: 'Dosis', sans-serif;
+}
+
+#h1Style{
+    font-size: 60px;
+    
+    
+}
+
+body{
+    background-color: rgb(255, 234, 254) !important;
+}
+
+#firstThreeProduct{
+    margin-top: 30px;
+}
+
+#productImg{
+    width:200px;
+    height:200px;
+}
+
+.thumbnail{
+    font-family: 'Playfair Display', serif;
+}
+
+#productImage{
+    width: 300px;
+    height:300px;
+}
+
+#productName{
+    font-family: 'Dosis', sans-serif;
+    font-size: 52px;
+}
+
+#productDescription{
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    
+}
+
+#shoppingBasketBtn{
+    padding:15px;
+    margin-top: 20px;
+    margin-left: 15%;
+    background-color: rgb(252, 137, 172);
+    font-family: 'Dosis', sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+}
