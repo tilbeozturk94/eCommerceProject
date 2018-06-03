@@ -59,3 +59,9 @@ body{
     font-weight: bold;
     font-size: 18px;
 }
+
+#tableRow{
+    margin: 0 25%;
+    width:100%;
+   
+}
