@@ -22,6 +22,14 @@ app.get("/shoppingcart", function(req,res){
     res.sendFile(__dirname + "/views/shoppingcart.html");
 });
 
+app.get("/shoppingcart/completeorder", function(req, res) {
+    res.sendFile(__dirname + "views/completeorder.html");
+});
+
+app.get("/vieworder", function(req, res) {
+    res.sendFile(__dirname + "views/vieworder.html");
+});
+
 app.use("/api/products", makeupITroutes);
 
 app.listen(port,function(){

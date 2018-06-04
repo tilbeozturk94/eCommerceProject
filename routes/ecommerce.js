@@ -1,7 +1,6 @@
 var express = require("express");
 var router = express.Router();
 var db = require("../models");
-var Shoppingcart = require("../models/shoppingcart.js");
 
 
 router.get("/",function(req,res){
@@ -36,7 +35,7 @@ router.get("/:id", function(req,res){
 });
 
 router.post("/complete/shoppingcart", function(req,res){
-   Shoppingcart.create(req.body)
+   db.Shoppingcart.create(req.body)
    .then(function(newCartItem){
       res.status(201).json(newCartItem);
    })
@@ -45,7 +44,7 @@ router.post("/complete/shoppingcart", function(req,res){
    });
 });
 router.get("/complete/shoppingcart", function(req,res){
-   Shoppingcart.find().then(function(data){
+   db.Shoppingcart.find().then(function(data){
       res.json(data);
    }).catch(function(err){
       res.send("Error while getting cart items " + err);
@@ -62,6 +61,25 @@ router.put("/:id", function(req,res){
    });
 });
 
+router.post("/orders/neworder", function(req,res){
+   db.Order.create(req.body)
+   .then(function(newCreated){
+      res.status(201).json(newCreated);
+   })
+   .catch(function(err){
+      res.send(err);
+   });
+});
+
+router.get("/orders/neworder", function(req,res){
+   db.Order.find()
+   .then(function(allorders){
+      res.json(allorders);
+   })
+   .catch(function(err){
+      res.send(err);
+   });
+});
 
 
 module.exports = router;

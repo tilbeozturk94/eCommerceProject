@@ -18,6 +18,7 @@ function mainFunction(product){
         $("#productImage").attr("src", product.img);
         $("#productName").text(product.name);
         $("#productDescription").text(product.description);
+        $("#productPrice").text(product.price + "€");
         var url = "https://wdb-part2-tilbeozturk.c9users.io/api/products/" + product._id;
         
         
