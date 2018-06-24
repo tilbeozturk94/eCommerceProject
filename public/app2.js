@@ -25,7 +25,7 @@ function mainFunction(product){
          $("#shoppingBasketBtn").on("click", function(){
          var num = $("#numberPicker").val();
      
-        if(product.stockQuantity > 0)
+        if(product.stockQuantity > 0 && num > 0)
         {
             if(num < product.stockQuantity)
           {  //post method for order
@@ -52,11 +52,11 @@ function mainFunction(product){
         });
     }
            else{
-            //modal view will appear as a warning 
+         alert("Sorry! We are out of stock you ordered!")
         }
         }
         else{
-            //modal view will appear as a warning 
+            alert("Invalid number of quantity!")
         }
        
     $("#numberPicker").val('');
