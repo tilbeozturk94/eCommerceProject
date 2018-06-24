@@ -12,7 +12,9 @@ $(document).ready(function(){
         console.log(err);
     });
    
+ 
 });
+
 
 function mainFunc(data){
     
@@ -22,10 +24,11 @@ function mainFunc(data){
     var str = "";
     var count = 1;
     
-     for(let i = 4 ; i< data.length; i++){
+     for(let i = 0 ; i< data.length; i++){
       str = str + "<tr><td>" + count + "</td><td>" + data[i].productname + "</td><td>" + data[i].quantity + "</td><td>" + data[i].price + "</td></tr>" ;
     }  
     
     str = str + "</tbody>";
     table.append(str);
+
 }

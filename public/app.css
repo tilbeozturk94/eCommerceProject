@@ -65,3 +65,11 @@ body{
     width:100%;
    
 }
+
+#allComplete{
+    margin-top: 25px;
+    padding-left: 4%;
+    padding-right: 4%;
+    border: 2px solid red;
+    font-family: 'Dosis', serif;
+}

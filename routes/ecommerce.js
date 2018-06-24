@@ -81,5 +81,38 @@ router.get("/orders/neworder", function(req,res){
    });
 });
 
+router.delete("/complete/shoppingcart", function(req,res){
+   
+   db.Shoppingcart.remove()
+   .then(function(){
+      res.json({message: "Deleted"});
+   })
+   .catch(function(err){
+      res.send("Error while deleting " + err);
+   });
+   
+});
+
+router.post("/complete/users", function(req,res){
+   
+   db.User.create(req.body)
+   .then(function(newUser){
+      res.status(201).json(newUser);
+   })
+   .catch(function(err){
+      res.send("Error while creating a user " + err);
+   });
+});
+
+router.get("/complete/users", function(req,res){
+   
+   db.User.find()
+   .then(function(allUsers){
+      res.json(allUsers);
+   })
+   .catch(function(err){
+      res.send("Error while getting users " + err);
+   });
+});
 
 module.exports = router;
